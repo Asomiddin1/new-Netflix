@@ -62,7 +62,11 @@ body {
 /* images box */
 #one_movie_img_box{
     display: flex;
+    width: 100%;
     padding: 20px 40px;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
 }
 
 #one_movie_img_box img{

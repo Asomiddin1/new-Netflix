@@ -33,17 +33,36 @@ async function getOneMovie() {
              <h1 class='slider_title'>${movieId.original_title}</h1>
              <p>${movieId.overview}</p>
                <div class="slider_btn_box">
-                 <button class="slider_pl_btn">Play now</button>
+                 <button onclick="playNowFunc('${oneData[0].key}')" class="slider_pl_btn">Play now</button>
                  <button class="slider_add_btn">Add my list</button>
               </div>
            </div>
         </div>`;
-
-      
+      oneMovieImgBox.innerHTML = `
+        <img width="300px" src="https://image.tmdb.org/t/p/w500${movieId.poster_path}" alt="">
+           <div>
+             <p>${movieId.vote_average}</p>
+              <h1>${movieId.original_title}</h1>
+              <p>${movieId.overview}</p>
+              <p>${movieId.genre_ids}</p>
+              <p>${movieId.original_language}</p>
+           </div>
+        `;
     }
   } catch (error) {
     console.error("Xatolik yuz berdi:", error);
   }
 }
+
+function playNowFunc(videoKey) {
+  oneMovieBox.innerHTML = `
+    <iframe width="100%" height="500px" 
+      src="https://www.youtube.com/embed/${videoKey}?autoplay=1&mute=0&controls=1" 
+      title="YouTube video player" frameborder="0" 
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+      referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
+    </iframe>`;
+}
+
 
 getOneMovie();
