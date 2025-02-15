@@ -47,10 +47,20 @@ body {
   padding: 0 40px;
   background-color: rgba(0, 0, 0, 0.638);
   position: sticky;
-  
+  justify-content: space-between;
   top: 0;
   z-index: 999;
   backdrop-filter: blur(10px);
+}
+.nav_lists{
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.user_box{
+  border: 1px solid white;
+  padding: 8px 12px;
+  border-radius: 100%;
 }
 
 .avengers {
@@ -173,4 +183,17 @@ body {
     justify-content: center;
     align-items: center;
     background-color: black;
+}
+
+
+@media only screen and (max-width: 600px) {
+  .img-container_popular img{
+    width: 150px;
+  }
+  .card_popular{
+  width: 150px;
+  }
+  .card_title_popular{
+    font-size: 8px;
+  }
 }

@@ -16,6 +16,7 @@ body {
     width: 100vw;
     height: 100vh;
     overflow: hidden;
+  
     z-index: -1;
 }
 
@@ -64,11 +65,16 @@ body {
     display: flex;
     width: 100%;
     padding: 20px 40px;
-    align-items: center;
     justify-content: center;
-    flex-wrap: wrap;
+    gap: 20px;
 }
 
 #one_movie_img_box img{
     border-radius: 10px;
 }
+
+@media only screen and (max-width: 600px) {
+    #one_movie_img_box{
+        flex-wrap: wrap;
+    }
+  }

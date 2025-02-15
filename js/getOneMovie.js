@@ -22,7 +22,7 @@ async function getOneMovie() {
     if (data.results) {
       let oneData = data.results;
       console.log(data.results, "one");
-      oneMovieBox.innerHTML = ` <div class="video-container">
+      oneMovieBox.innerHTML = `<div class="video-container">
             <iframe src="https://www.youtube.com/embed/${oneData[0].key}?autoplay=1&mute=1&loop=1&playlist=${oneData[0].key}&controls=0&showinfo=0&modestbranding=1&cc_load_policy=1" 
                 frameborder="0" allow="autoplay; encrypted-media" allowfullscreen>
             </iframe>
@@ -40,7 +40,7 @@ async function getOneMovie() {
         </div>`;
       oneMovieImgBox.innerHTML = `
         <img width="300px" src="https://image.tmdb.org/t/p/w500${movieId.poster_path}" alt="">
-           <div>
+           <div style='max-width:600px;'>
              <p>${movieId.vote_average}</p>
               <h1>${movieId.original_title}</h1>
               <p>${movieId.overview}</p>
