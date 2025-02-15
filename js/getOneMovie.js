@@ -17,7 +17,6 @@ async function getOneMovie() {
     };
 
     const response = await fetch(oneMovieUrl, options);
-
     const data = await response.json();
     if (data.results) {
       let oneData = data.results;
@@ -34,7 +33,7 @@ async function getOneMovie() {
              <p>${movieId.overview}</p>
                <div class="slider_btn_box">
                  <button onclick="playNowFunc('${oneData[0].key}')" class="slider_pl_btn">Play now</button>
-                 <button class="slider_add_btn">Add my list</button>
+                 <button onclick="addToMyList()" class="slider_add_btn">Add my list</button>
               </div>
            </div>
         </div>`;
@@ -64,5 +63,20 @@ function playNowFunc(videoKey) {
     </iframe>`;
 }
 
+// Foydalanuvchi tanlagan filmni "My List" ga qo'shish
+function addToMyList() {
+  let myList = JSON.parse(localStorage.getItem("myMovieList")) || [];
+  
+  // Film allaqachon ro‘yxatda bor yoki yo‘qligini tekshiramiz
+  const isAlreadyAdded = myList.some(movie => movie.id === movieId.id);
+  
+  if (!isAlreadyAdded) {
+    myList.push(movieId);
+    localStorage.setItem("myMovieList", JSON.stringify(myList));
+    alert("Film muvaffaqiyatli qo'shildi!");
+  } else {
+    alert("Bu film allaqachon ro‘yxatda mavjud!");
+  }
+}
 
 getOneMovie();
