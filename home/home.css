@@ -52,6 +52,34 @@ body {
   z-index: 999;
   backdrop-filter: blur(10px);
 }
+
+.search_box{
+  position: absolute;
+  top: 10vh;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+}
+.search_content{
+  height: 90vh;
+  width: 100%;
+  padding: 10px 20px;
+  min-height: 100px;
+  background-color: #141414;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding-top: 30px;
+}
+.img_box{
+  display: flex;
+  gap: 20px;
+}
+.img_box img{
+  border-radius: 10px;
+}
 .nav_lists{
   display: flex;
   align-items: center;
@@ -196,4 +224,63 @@ body {
   .card_title_popular{
     font-size: 8px;
   }
+}
+
+/* search */
+
+.search-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.search-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.search-icon:hover {
+  background-color: hsl(0, 70%, 49%);
+}
+
+
+
+.search-input {
+  position: absolute;
+  right: 0;
+  width: 0;
+  opacity: 0;
+  padding: 10px;
+  border: none;
+  border-radius: 20px;
+  outline: none;
+  transition: width 0.4s ease, opacity 0.3s;
+  font-size: 16px;
+}
+
+.search-container.active .search-input {
+  width: 200px;
+  opacity: 1;
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+  height: 8px;
+
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: gray;
+  border-radius: 40px;
+
+}
+
+::-webkit-scrollbar-track {
+  background-color: transparent;
 }

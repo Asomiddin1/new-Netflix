@@ -9,13 +9,30 @@
     <link rel="stylesheet" href="./my-list.css">
 </head>
 <body>
-    <nav class="home_nav">
-        <a style="text-decoration: none;" href="../home/home.html"><h1 style="color: red">Netflix</h1></a>
-        <div class="nav_lists">
-          <a style="text-decoration: none;color: white;" href="../myList/my-list.html"><p>My list</p></a>
-          <p class="user_box"><i class="fa-solid fa-user-large"></i></p>
-        </div>
-      </nav>
+  <nav class="home_nav">
+    <a style="text-decoration: none" href="../home/home.html"
+      ><h1 style="color: red; letter-spacing: 2px">Netflix</h1></a
+    >
+    <div class="nav_lists">
+      <div class="search-container">
+        <div class="search-icon"><i class="fa-solid fa-magnifying-glass"></i></div>
+        <input type="text" class="search-input" placeholder="Qidirish..." />
+      </div>
+      <a
+        style="text-decoration: none; color: white"
+        href="../myList/my-list.html"
+        ><p>My list</p></a
+      >
+      <p class="user_box"><i class="fa-solid fa-user-large"></i></p>
+    </div>
+
+    <!-- search -->
+    <div class="search_box">
+      <div class="search_content">
+     
+      </div>
+    </div>
+  </nav>
 
       <div class="myList_Box">
         <div class="container">
@@ -28,7 +45,35 @@
             </div>
         </div>
       </div>
+
+      <footer style="background-color: #111; color: #757575; padding: 40px 0; text-align: center;">
+        <div style="max-width: 900px; margin: auto;">
+            <p style="margin-bottom: 20px;">Questions?     <a href="https://t.me/+xQNTofqHBWE2MmMy" style="color: #757575; text-decoration: underline; margin-left: 20px;">   https://t.me/+xQNTofqHBWE2MmMy</a></p>
+            
+            <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 15px; margin-bottom: 20px;">
+                <a href="#" style="color: #757575; text-decoration: none;">Help Center</a>
+                <a href="#" style="color: #757575; text-decoration: none;">Terms of Use</a>
+                <a href="#" style="color: #757575; text-decoration: none;">Privacy Policy</a>
+                <a href="#" style="color: #757575; text-decoration: none;">Cookie Preferences</a>
+                <a href="#" style="color: #757575; text-decoration: none;">Contact Us</a>
+            </div>
+            
+    
+            <div style="margin-bottom: 20px;">
+                <a href="#" style="color: #757575; margin: 0 10px;"><i class="fab fa-facebook"></i></a>
+                <a href="#" style="color: #757575; margin: 0 10px;"><i class="fab fa-instagram"></i></a>
+                <a href="#" style="color: #757575; margin: 0 10px;"><i class="fab fa-twitter"></i></a>
+                <a href="#" style="color: #757575; margin: 0 10px;"><i class="fab fa-youtube"></i></a>
+            </div>
+    
+            <p style="font-size: 14px;">© 2025 Netflix Clone. All rights reserved.</p>
+        </div>
+    
+        <!-- FontAwesome -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    </footer>
     
     <script src="../js/getList.js"></script>
+    <script src="../js/search.js"></script>
 </body>
 </html>
